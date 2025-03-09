@@ -28,7 +28,6 @@ body {
 #color-palette {
   display: flex;
   justify-content: center;
-  margin-bottom: -20px;
 }
 
 .color {
@@ -41,14 +40,10 @@ body {
 }
 
 #buttons-collector {
+  /* background-color: red; */
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-}
-
-#button-random-color {
-  display: inline-block;
-  margin-right: 13px;
+  margin-top: 10px;
 }
 
 #pixel-board {
