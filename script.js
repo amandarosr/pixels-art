@@ -48,7 +48,7 @@ const createBoard = (number) => {
     pixelBoard.appendChild(pixel);
   }
 };
-createBoard(100);
+createBoard(120);
 
 const pixels = document.querySelectorAll('.pixel');
 

@@ -1,14 +1,25 @@
 body {
-  background-image: url('./background/heart.gif');
-  background-size: cover;
+  /* background-color: bisque; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.page-container {
+  /* border: solid black 2px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 60%; */
 }
 
 #title {
   text-align: center;
-  color: rgb(255, 212, 225);
-  background-color: rgba(158, 0, 34, 0.8);
-  margin-left: 580px;
-  margin-right: 580px;
+  margin: 10px 0;
   border-radius: 10%;
   height: 50px;
   padding-top: 10px;
@@ -17,6 +28,7 @@ body {
 #color-palette {
   display: flex;
   justify-content: center;
+  margin-bottom: -20px;
 }
 
 .color {
@@ -44,9 +56,13 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 450px;
-  margin-left: 530px;  
+  margin: 20px;
 }
 
 .selected {
-  border-radius: 20%;
+  border: double red 5px
+}
+
+.custom-divs {
+  justify-self: flex-end;
 }
