@@ -48,14 +48,14 @@ const createBoard = (number) => {
     pixelBoard.appendChild(pixel);
   }
 };
-createBoard(120);
+createBoard(234);
 
 const pixels = document.querySelectorAll('.pixel');
 
 for (let index6 = 0; index6 < pixels.length; index6 += 1) {
-  pixels[index6].style.border = 'solid black 1px';
-  pixels[index6].style.height = '40px';
-  pixels[index6].style.width = '40px';
+  pixels[index6].style.border = 'solid dimgrey 1px';
+  pixels[index6].style.height = '30px';
+  pixels[index6].style.width = '30px';
   pixels[index6].style.display = 'inline-block';
   pixels[index6].style.backgroundColor = 'white';
 }

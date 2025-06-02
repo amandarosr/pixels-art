@@ -1,6 +1,6 @@
 @font-face {
-    font-family: TitleFont;
-    src: url("./images/Minecraft.ttf");
+  font-family: PixelFont;
+  src: url("./images/DePixelBreit.ttf");
 }
 
 body {
@@ -11,30 +11,44 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  font-family: PixelFont;
   margin: 0;
   min-height: 100vh;
-  font-family: TitleFont;
   width: 100vw;
 }
 
 button {
-  font-family: TitleFont;
+  color: #fff;
+  background-color: #A82A4E;
+  font-family: PixelFont;
+  font-size: 15px;
+  border: 0;
+  box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black,
+    0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038,
+    inset 0px 5px #ffffff36;
+  margin: 0 10px;
+  padding: 5px 10px;
+}
+
+.ratio-btn {
+  background-color: #585E8C;
 }
 
 .page-container {
-  /* border: solid black 2px; */
+  backdrop-filter: blur(2px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 60%; */
 }
 
 #title {
-  text-align: center;
+  color: beige;
+  text-shadow: 4px 4px 0px rgb(168, 42, 78);
   margin: 10px 0;
   border-radius: 10%;
   height: 50px;
   padding-top: 10px;
+  font-size: 50px;
 }
 
 #color-palette {
@@ -52,7 +66,6 @@ button {
 }
 
 #buttons-collector {
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -62,14 +75,22 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 450px;
+  max-width: 430px;
   margin: 20px;
 }
 
 .selected {
-  border: double red 5px
+  border: double red 5px;
 }
 
 .custom-divs {
   justify-self: flex-end;
+}
+
+#black {
+  background-color: black;
+}
+
+#white {
+  background-color: white;
 }
