@@ -80,7 +80,7 @@ button {
 }
 
 .selected {
-  border: double red 5px;
+  border: solid #a82a4e 5px;
 }
 
 .custom-divs {

@@ -1,6 +1,6 @@
 // const colorPalette = document.querySelector('#color-palette');
 const colorSquares = document.getElementsByClassName('color');
-const colors = ['black', 'aquamarine', 'coral', 'greenyellow'];
+const colors = ['hotpink', 'aquamarine', 'coral', 'greenyellow'];
 const buttonRandom = document.querySelector('#button-random-color');
 const buttonClear = document.querySelector('#clear-board');
 
@@ -14,17 +14,17 @@ const addColor = () => {
 addColor();
 
 buttonRandom.addEventListener('click', () => {
-  const randomizable = [colorSquares[1], colorSquares[2], colorSquares[3]];
+  const randomizable = [colorSquares[0], colorSquares[1], colorSquares[2], colorSquares[3]];
   for (let index2 = 0; index2 < randomizable.length; index2 += 1) {
     const randomColor = randomizable[index2];
     randomColor.style.backgroundColor = `rgb(${Math.floor(Math.random() * 220) + 50}, 
             ${Math.random() * 255}, ${Math.random() * 255})`;
   }
   const myColors = {
-    color1: colorSquares[0].style.backgroundColor,
-    color2: randomizable[0].style.backgroundColor,
-    color3: randomizable[1].style.backgroundColor,
-    color4: randomizable[2].style.backgroundColor,
+    color1: randomizable[0].style.backgroundColor,
+    color2: randomizable[1].style.backgroundColor,
+    color3: randomizable[2].style.backgroundColor,
+    color4: randomizable[3].style.backgroundColor,
   };
 
   localStorage.setItem('colorPalette', JSON.stringify(myColors));
