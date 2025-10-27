@@ -10,12 +10,13 @@ body {
   justify-content: center;
   align-items: center;
   font-family: PixelFont;
+  overflow-x: hidden;
   margin: 0;
 }
 
 button {
   color: #fff;
-  background-color: #a82a4e;
+  background-color: #11134dd5;
   font-family: PixelFont;
   font-size: 15px;
   border: 0;
@@ -69,58 +70,88 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
+  width: 95vw;
   overflow-x: hidden;
 }
 
 .painting {
-  border: 12px #4E342E solid;
+  border: 8px #4E342E solid;
+  box-shadow: 0px 5px #4E342E, 0px -5px #4E342E, 5px 0px #4E342E, -5px 0px #4E342E,
+    0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038,
+    inset 0px 5px #ffffff36;
   width: 10rem;
   margin: 0 10px;
 }
 
 #pixel-board {
-  border: groove #a07955 12px;
+  border: groove #B88B67 12px;
+  box-shadow: 0px 2px #4E342E, 0px -2px #4E342E, 2px 0px #4E342E, -3px 0px #4E342E,
+    0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038,
+    inset 0px 5px #ffffff36;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   justify-self: center;
   padding: 0;
-  width: 632px;
+  width: 591px;
   margin: 40px 20px 10px;
 }
 
 .pixel {
-  height: 30px;
-  width: 30px;
+  height: 23px;
+  width: 23px;
 }
 
 .selected {
-  border: solid #a82a4e 5px;
+  border: solid brown 4px;
+  border-radius: 3px;
 }
 
 footer {
-  background-image: url("./images/wood.png");
+  background-image: url("./images/dark-wood.png");
   background-size: contain;
-  background-position: 50%;
-  border-top: 4px solid #DDC7AF;
+  border-top: 4px solid #B88B67;
   position: fixed;
   bottom: 0;
   margin: 0;
-  height: 42px;
-  width: 100vw;
+  height: 40px;
+  width: 100%;
 }
 
 @media screen and (max-width: 1150px) {
   #exhibit {
     justify-content: center;
+    width: 120vw;
   }
+}
 
+@media screen and (max-width: 820px) {
   .painting {
     display: none;
   }
 }
 
-/* @media screen and (max-width: 1150px) {
-  
-} */
+@media screen and (max-width: 700px) {
+  /* #exhibit {
+    width: 100vw;
+  }
+
+  .page-container {
+    justify-content: flex-start;
+    height: 140vh;
+  }
+
+  #pixel-board {
+    width: 320px;
+    margin: 30px 0 10px;
+  }
+
+  .pixel {
+    height: 25px;
+    width: 25px;
+  }
+
+  footer {
+    height: 30px;
+  } */
+}
