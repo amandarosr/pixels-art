@@ -16,15 +16,20 @@ body {
 
 button {
   color: #fff;
-  background-color: #11134dd5;
+  background-color: olive;
+  cursor: pointer;
   font-family: PixelFont;
-  font-size: 15px;
+  font-size: 14px;
   border: 0;
   box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black,
     0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038,
     inset 0px 5px #ffffff36;
   margin: 0 10px;
   padding: 5px 10px;
+}
+
+button:hover {
+  background-color: rgba(128, 128, 0, 0.8);
 }
 
 .page-container {
@@ -39,7 +44,7 @@ button {
 #title {
   color: #4e342e;
   text-shadow: 4px 4px 0px rgb(223, 177, 189);
-  margin: 10px 0;
+  margin: 5px 0 15px;
   border-radius: 10%;
   text-align: center;
   height: 50px;
@@ -63,7 +68,7 @@ button {
 #buttons-collector {
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 #exhibit {

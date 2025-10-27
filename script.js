@@ -1,6 +1,6 @@
 // const colorPalette = document.querySelector('#color-palette');
 const colorSquares = document.getElementsByClassName('color');
-const colors = ['hotpink', 'aquamarine', 'coral', 'greenyellow'];
+const colors = ['#3e5895ff', '#BF5D3C', '#F4BD9B', '#426041ff'];
 const buttonRandom = document.querySelector('#button-random-color');
 const buttonClear = document.querySelector('#clear-board');
 
