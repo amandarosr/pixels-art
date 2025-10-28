@@ -4,51 +4,56 @@
 }
 
 body {
-  background-image: url("./images/pixel-countryside.webp");
-  background-size: cover;
-  background-position-y: 90%;
+  background: #fdfae6;
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 232) 0%,
+    rgb(207, 207, 174) 100%
+  );
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   font-family: PixelFont;
+  overflow-x: hidden;
   margin: 0;
-  min-height: 100vh;
-  /* width: 100vw; */
 }
 
 button {
   color: #fff;
-  background-color: #A82A4E;
+  background-color: olive;
+  cursor: pointer;
   font-family: PixelFont;
-  font-size: 15px;
+  font-size: 14px;
   border: 0;
-  box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black,
-    0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038,
+  box-shadow: 0px 4px #4e342e, 0px -4px #4e342e, 4px 0px #4e342e,
+    -4px 0px #4e342e, 0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038,
     inset 0px 5px #ffffff36;
   margin: 0 10px;
   padding: 5px 10px;
 }
 
-.ratio-btn {
-  background-color: #585E8C;
+button:hover {
+  background-color: rgba(128, 128, 0, 0.8);
 }
 
 .page-container {
-  backdrop-filter: blur(2px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  height: 90vh;
 }
 
 #title {
-  color: beige;
-  text-shadow: 4px 4px 0px rgb(168, 42, 78);
-  margin: 10px 0 20px;
+  color: rgb(78, 52, 46, 0.9);
+  text-shadow: 4px 4px 0px rgb(223, 177, 189);
+  margin: 5px 0 15px;
   border-radius: 10%;
+  text-align: center;
   height: 50px;
-  padding-top: 10px;
-  font-size: 50px;
+  font-size: 45px;
 }
 
 #color-palette {
@@ -58,27 +63,158 @@ button {
 
 .color {
   border: solid black 1px;
+  box-shadow: 0px 2px #4e342e, 0px -2px #4e342e, 2px 0px #4e342e,
+    -2px 0px #4e342e, 0px 5px #00000038, 3px 3px #00000038, -3px 3px #00000038,
+    inset 0px 5px #ffffff36;
   display: inline-block;
-  height: 45px;
-  width: 45px;
-  margin-left: 2px;
-  margin-right: 2px;
+  height: 40px;
+  width: 40px;
+  margin: 0 4px;
 }
 
 #buttons-collector {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+#exhibit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95vw;
+  overflow-x: hidden;
+}
+
+.painting {
+  border: 8px #4e342e solid;
+  box-shadow: 0px 5px #4e342e, 0px -5px #4e342e, 5px 0px #4e342e,
+    -5px 0px #4e342e, 0px 10px #00000038, 7px 5px #00000038, -5px 5px #00000038,
+    inset 0px 5px #ffffff36;
+  width: 10rem;
+  margin: 0 10px;
 }
 
 #pixel-board {
+  border: groove #b88b67 12px;
+  box-shadow: 0px 2px #4e342e, 0px -2px #4e342e, 2px 0px #4e342e,
+    -3px 0px #4e342e, 0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038,
+    inset 0px 5px #ffffff36;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 430px;
-  margin: 20px 10px;
+  justify-self: center;
+  padding: 0;
+  width: 591px;
+  margin: 40px 20px 10px;
+}
+
+.pixel {
+  height: 23px;
+  width: 23px;
 }
 
 .selected {
-  border: solid #a82a4e 5px;
+  border: solid rgb(223, 36, 36) 3px;
+  border-radius: 3px;
+}
+
+footer {
+  background-image: url("./images/dark-wood.png");
+  background-size: contain;
+  border-top: 4px solid #b88b67;
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  height: 40px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1150px) {
+  #exhibit {
+    justify-content: center;
+    width: 120vw;
+  }
+
+  .painting {
+    width: 8rem;
+  }
+
+  #pixel-board {
+    width: 572px;
+  }
+
+  .pixel {
+  height: 22px;
+  width: 22px;
+}
+}
+
+@media screen and (max-width: 800px) {
+  .painting {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #exhibit {
+    width: 100vw;
+  }
+
+  #title {
+    font-size: 42px;
+  }
+
+  /* .page-container {
+    height: 100vh;
+  } */
+
+  #pixel-board {
+    width: 317px;
+    margin: 30px 0 10px;
+  }
+
+  .pixel {
+    height: 16px;
+    width: 16px;
+  }
+
+  footer {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .page-container {
+    margin-top: 5px;
+    height: 100vh;
+  }
+
+  #title {
+    font-size: 36px;
+    margin: 0;
+  }
+
+  button {
+    font-size: 12px;
+  }
+
+  .color {
+    height: 35px;
+    width: 35px;
+  }
+
+  #pixel-board {
+    width: 272px;
+    margin-top: 20px;
+  }
+
+  .pixel {
+    height: 12px;
+    width: 12px;
+  }
+
+  footer {
+    display: none;
+  }
 }

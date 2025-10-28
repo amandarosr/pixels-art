@@ -1,6 +1,5 @@
-// const colorPalette = document.querySelector('#color-palette');
 const colorSquares = document.getElementsByClassName('color');
-const colors = ['hotpink', 'aquamarine', 'coral', 'greenyellow'];
+const colors = ['#32487c', '#EFBDEB', '#bf5d3c', '#98b206'];
 const buttonRandom = document.querySelector('#button-random-color');
 const buttonClear = document.querySelector('#clear-board');
 
@@ -30,15 +29,6 @@ buttonRandom.addEventListener('click', () => {
   localStorage.setItem('colorPalette', JSON.stringify(myColors));
 });
 
-// const savedColor = Object.values(JSON.parse(localStorage.getItem('colorPalette')));
-
-// for (let index4 = 0; index4 < colorSquares.length; index4 += 1) {
-//   if (localStorage.length !== null) {
-//     colorSquares[index4].style.backgroundColor = `${savedColor[index4]}`;
-//   } else {
-//     colorSquares[index4].style.backgroundColor = `${colors[index4]}`;
-//   }
-
 const pixelBoard = document.querySelector('#pixel-board');
 
 const createBoard = (number) => {
@@ -48,14 +38,12 @@ const createBoard = (number) => {
     pixelBoard.appendChild(pixel);
   }
 };
-createBoard(234);
+createBoard(360);
 
 const pixels = document.querySelectorAll('.pixel');
 
 for (let index6 = 0; index6 < pixels.length; index6 += 1) {
-  pixels[index6].style.border = 'solid dimgrey 1px';
-  pixels[index6].style.height = '30px';
-  pixels[index6].style.width = '30px';
+  pixels[index6].style.border = 'solid grey 1px';
   pixels[index6].style.display = 'inline-block';
   pixels[index6].style.backgroundColor = 'white';
 }
